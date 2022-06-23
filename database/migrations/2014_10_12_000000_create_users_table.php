@@ -35,4 +35,13 @@ return new class extends Migration
     {
         Schema::dropIfExists('users');
     }
+    private function userAdmin() 
+    {
+        $user =  User::create([
+            'name' => 'SuperAdmin',
+            'email' => 'admin@splashcreative.com',
+            'password' => 'test',
+            'role' => 'admin'
+        ]);    
+     }
 };
